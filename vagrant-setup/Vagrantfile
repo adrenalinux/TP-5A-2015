@@ -1,0 +1,73 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Load seetings
+require 'yaml'
+settings = YAML.load_file 'settings.yml'
+
+Vagrant.configure(2) do |config|
+
+  config.vm.box = settings['box']
+  prefix_name=settings['prefix_node']
+
+  # For each node
+  (1..settings['nb_nodes']).each do |i|
+
+    config.vm.define "#{prefix_name}#{i}" do |node|
+
+      node.vm.hostname = "#{prefix_name}#{i}"
+
+      # Disable synced folder
+      node.vm.synced_folder './', '/vagrant', type: 'rsync', disabled: true
+
+      # Network settings
+      settings['networks'].each do |ipp|
+        node.vm.network :private_network, ip: "#{ipp}#{i}"
+      end
+
+      # VirtualBox settings
+      node.vm.provider :virtualbox do |v|
+        v.customize ["modifyvm", :id, "--name", "#{prefix_name}#{i}"]
+        v.customize ["modifyvm", :id, "--memory", settings['ram']]
+        v.customize ["modifyvm", :id, "--cpuexecutioncap", settings["cpuexecutioncap"]]
+
+        ## Devices settings
+
+        # Export device
+        if defined? settings['export_device'] 
+          if i <= 2
+            dir =  settings['export_device']['directory']
+            d_file = "#{dir}/#{prefix_name}-export-dev-node-#{i}.vdi"
+            d_size = settings['export_device']['size'] 
+            d_ctrl = settings['export_device']['ctrl']
+            d_port = settings['export_device']['port']
+            d_device = settings['export_device']['device']
+
+            unless File.exist?(d_file)
+              v.customize ['createhd', '--filename', d_file, '--size', d_size]
+              v.customize ['storageattach', :id, '--storagectl', d_ctrl,
+                          '--port', d_port, '--device', d_device, '--type', 'hdd',
+                          '--medium', d_file]
+            end
+          end
+        end
+        # Storage devices
+        settings["stor_devices"].each_with_index do |j, idx|
+          dir =  j['directory']
+          d_file = "#{dir}/#{prefix_name}-storage-dev-#{idx}-node-#{i}.vdi"
+          d_size = j['size']
+          d_ctrl = j['ctrl']
+          d_port = j['port']
+          d_device = j['device']
+
+          unless File.exist?(d_file)
+            v.customize ['createhd', '--filename', d_file, '--size', d_size]
+            v.customize ['storageattach', :id, '--storagectl', d_ctrl,
+                        '--port', d_port, '--device', d_device, '--type', 'hdd',
+                        '--medium', d_file]
+          end
+        end
+      end
+    end
+  end
+end
