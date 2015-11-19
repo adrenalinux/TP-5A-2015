@@ -1,23 +1,22 @@
 
-box: ubuntu/trusty64
+box: chef/debian-7.8
 
-prefix_node: 'trusty-node-'
+prefix_node: 'rozo'
 
-ram: 1024
-cpuexecutioncap: 60
+ram: 256
+cpuexecutioncap: 25
 
 nb_nodes: 4
 
 # Private Networks
-networks: ['192.168.100.4','192.168.101.4']
+networks: ['192.168.100.4']
 
 ## Devices Settings
 
 # Export device only on 2 first nodes
-export_device:	{ directory: './tmp', size: 40, ctrl: 'SATAController', port: 1, device: 0 }
+export_device: { directory: './tmp', size: 40, ctrl: 'IDE Controller', port: 0, device: 1 }
 
 # Storage devices on all nodes
 stor_devices: 
-- { directory: './tmp', size: 40, ctrl: 'SATAController', port: 2, device: 0 }
-- { directory: './tmp', size: 40, ctrl: 'SATAController', port: 3, device: 0 }
+- { directory: './tmp', size: 40, ctrl: 'IDE Controller', port: 1, device: 0 }
 
