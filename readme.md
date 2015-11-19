@@ -1,11 +1,11 @@
 # TP - Stockage distribué
 
-**Vendredi 19 Novembre 2015 - Polytech'Nantes **
+**Vendredi 19 Novembre 2015 - Polytech'Nantes**
 
 **Intervenants** :
 
-- Sylvain DAVID - *Ingénieur R&D*  - <sylvain.david@rozosystems.com>
-- Dimitri PERTIN - *Doctorant* - <dimitri.pertin@univ-nantes.fr>
+- Sylvain DAVID - *Ingénieur R&D*  - <firstname.lastname@rozosystems.com>
+- Dimitri PERTIN - *Doctorant* - <firstname.lastname@univ-nantes.fr>
 
 ## Introduction
 
