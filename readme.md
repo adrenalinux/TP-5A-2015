@@ -80,7 +80,7 @@ Maintenant que vous avez installé et configuré un environnement simple de Rozo
 - Il est possible d'utiliser l'outil `rozo` (bêta)  pour configurer les 4 VMs en une seule commande (`man rozo`).
 
 **Rappel de quelques définitions**
-*storaged node* : un serveur stockant des projections sur n emplacemants logique de stockage (*storage*).
+*storaged node* : un serveur stockant des projections sur n emplacements logique de stockage (*storage*).
 *storage* : emplacement logique de stockage identifié par un `SID`, un *storage* peut utiliser plusieurs systèmes de fichiers sous-jacents.
 *device* : un système de fichiers contenant les données des fichiers stockés dans RozoFS.
 *cluster* : ensemble de *storage* (`host`, `SID`) utilisé pour stocker les données d'un fichier (identifiant : `CID`)
@@ -104,4 +104,4 @@ RozoFS étant un système de fichiers tolérant à la panne, essayer de mettre e
 
 - Supprimer des données (projections) et essayer d'écrire et de lire des fichiers.
 - Simuler une panne (réseau, disque etc..) et essayer d'écrire et de lire des fichiers.
-- Dans qu'elle cas préferer un système avec du code à effacement à un système à base de réplicas ?
+- Dans qu'elle cas préférer un système avec du code à effacement à un système à base de réplicas ?
