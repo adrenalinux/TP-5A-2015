@@ -1,11 +1,11 @@
 # TP - Stockage distribué
 
-**Vendredi 19 Novembre 2015 - Polytech'Nantes**
+**Vendredi 9 décembre 2016 - Polytech'Nantes**
 
 **Intervenants** :
 
 - Sylvain DAVID - *Ingénieur R&D*  - <firstname.lastname@rozosystems.com>
-- Dimitri PERTIN - *Doctorant* - <firstname.lastname@univ-nantes.fr>
+- Dimitri PERTIN - *Post-Doctorant* - <firstname.lastname@inria.fr>
 
 ## Introduction
 
@@ -40,7 +40,7 @@ Installer les différents packages en suivant la procédure suivante :
 Installation du dépôt et de la clé de signature :
 ```
 wget -O - http://dl.rozofs.org/deb/devel@rozofs.com.gpg.key | apt-key add -
-echo deb http://dl.rozofs.org/deb/rozofs-v2 $(lsb_release -sc) main | tee /etc/apt/sources.list.d/rozofs.list
+echo deb http://dl.rozofs.org/deb/develop $(lsb_release -sc) main | tee /etc/apt/sources.list.d/rozofs.list
 ```
 
 Installation des paquets :
