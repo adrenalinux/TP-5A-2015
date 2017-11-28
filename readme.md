@@ -43,7 +43,7 @@ Installation du dépôt et de la clé de signature :
 ```
 # wget -O - http://dl.rozofs.org/deb/devel@rozofs.com.gpg.key \
     | apt-key add -
-# echo deb http://dl.rozofs.org/deb/develop stretch main \
+# echo deb http://dl.rozofs.org/deb/master stretch main \
     | tee /etc/apt/sources.list.d/rozofs.list
 ```
 
