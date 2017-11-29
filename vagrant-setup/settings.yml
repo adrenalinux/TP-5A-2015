@@ -3,7 +3,7 @@ box: debian/stretch64
 
 prefix_node: 'rozo'
 
-ram: 512
+ram: 1024
 cpuexecutioncap: 25
 
 nb_nodes: 4
