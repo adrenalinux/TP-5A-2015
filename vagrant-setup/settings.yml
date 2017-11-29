@@ -1,5 +1,5 @@
 
-box: debian/jessie64
+box: debian/stretch64
 
 prefix_node: 'rozo'
 
