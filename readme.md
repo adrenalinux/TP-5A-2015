@@ -26,7 +26,7 @@ Pour rappel, [RozoFS](https://github.com/rozofs/rozofs) est :
 
 ## Comprendre l'architecture de RozoFS
 
-**Avant de passer à l'installation**, répondez succinctement aux questions suivantes en vous aidant de la [documentation en ligne](http://rozofs.github.io/rozofs/develop/AboutRozoFS.html) et du contenu du cours brillamment dispensé par Dimitri Pertin:
+**Avant de passer à l'installation**, répondez succinctement aux questions suivantes en vous aidant de la [documentation en ligne](http://rozofs.github.io/rozofs/develop/AboutRozoFS.html) et du contenu du cours :
 
 - Comment les données sont elles stockées sous RozoFS ? (mode de stockage, répartition)
 - Comment et où sont stockées les méta-données des fichiers ? précisez les différents types de métadonnées existants ?
@@ -42,7 +42,7 @@ Installation du dépôt et de la clé de signature :
 ```
 # wget -O - http://dl.rozofs.org/deb/devel@rozofs.com.gpg.key \
     | apt-key add -
-# echo deb http://dl.rozofs.org/deb/master $(lsb_release -sc) main \
+# echo deb http://dl.rozofs.org/deb/develop $(lsb_release -sc) main \
     | tee /etc/apt/sources.list.d/rozofs.list
 ```
 
