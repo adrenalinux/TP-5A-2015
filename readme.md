@@ -1,6 +1,6 @@
 # TP - Stockage distribué
 
-**Mercredi 19 décembre 2018 - Polytech Nantes**
+**Vendredi 17 mai 2019 - Polytech Nantes**
 
 **Intervenant** :
 
