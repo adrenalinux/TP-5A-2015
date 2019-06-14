@@ -75,7 +75,7 @@ En vous aidant des pages man de `rozo` et des fichiers de configuration, expliqu
 
 Maintenant que vous avez installé et configuré un environnement simple de RozoFS en local, transposer cette configuration sur 4 machines virtuelles *Vagrant* comme indiqué ci-dessous (adressage IP libre) :
 
-![](./resources/archi-1-v1.png)
+![](./resources/archi-1-v2.png)
 
 
 
