@@ -1,6 +1,6 @@
 # TP - Stockage distribué
 
-**Vendredi 17 mai 2019 - Polytech Nantes**
+**Mercredi 29 janvier 2020 - Polytech Nantes**
 
 **Intervenant** :
 
@@ -12,7 +12,7 @@
 
 Le but de ce TP est de mettre en œuvre et de comprendre l'architecture d'un système de stockage distribué avec la solution RozoFS. Pour ceux qui ont déjà manipulé RozoFS, il vous est possible d'utiliser un autre système de stockage distribué si vous le souhaitez (**nous le signaler avant si c'est le cas**).	
 
-Dans un premier temps, vous aller mettre en œuvre RozoFS sur une seule machine (en local) pour comprendre le rôle de chaque composant de RozoFS.
+Dans un premier temps, vous allez mettre en œuvre RozoFS sur une seule machine (en local) pour comprendre le rôle de chaque composant de RozoFS.
 
 Dans un second temps, vous allez installer 4 machines virtuelles via l'utilitaire [*Vagrant*](https://www.vagrantup.com) et tester/explorer les fonctionnalités de RozoFS sur ces 4 machines.
 
@@ -31,7 +31,7 @@ Pour rappel, [RozoFS](https://github.com/rozofs/rozofs) est :
 - Comment les données sont elles stockées sous RozoFS ? (mode de stockage, répartition)
 - Comment et où sont stockées les méta-données des fichiers ? précisez les différents types de métadonnées existants ?
 
-- Quels sont les avantages et les inconvénients d'une solution distribuée telle que RozoFS, par rapport un système de fichier non-clusterisé ? et par rapport à d'autres systèmes de fichiers clusterisées ?
+- Quels sont les avantages et les inconvénients d'une solution distribuée telle que RozoFS, par rapport à un système de fichier non-clusterisé ? et par rapport à d'autres systèmes de fichiers clusterisées ?
 
 
 ## Installation de RozoFS sur une seule machine (en local)
